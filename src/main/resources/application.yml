@@ -1,0 +1,16 @@
+
+spring:
+    application:
+        name: monitoring-client
+server:
+    port: 2000
+
+feign:
+    hystrix:
+        enabled: true
+    client:
+        config:
+            event-client:
+                connectTimeout: 5000
+                readTimeout: 5000
+                loggerLevel: basic
